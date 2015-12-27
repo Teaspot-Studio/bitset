@@ -1,5 +1,5 @@
 Name:                 bitset
-Version:              1.4.8
+Version:              1.5
 Synopsis:             A space-efficient set data structure.
 Description:
   A /bit set/ is a compact data structure, which maintains a set of members
@@ -36,9 +36,9 @@ Library
   else
     Extra-libraries:  gmp
 
-  Build-depends:      base                       >= 4.4.0 && < 4.8
+  Build-depends:      base                       >= 4.4.0 && < 4.9
                     , deepseq
-                    , integer-gmp
+                    , integer-gmp                >= 1.0.0.0
                     , ghc-prim
 
   Exposed-modules:    Data.BitSet

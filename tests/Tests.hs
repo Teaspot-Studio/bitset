@@ -3,11 +3,10 @@
 
 module Main (main) where
 
-import Control.Applicative ((<$>))
 import Data.Bits (popCount, testBit, setBit, clearBit)
 import Data.Int (Int16)
 import Data.List ((\\), intersect, union, nub, sort)
-import Data.Monoid ((<>), mempty)
+import Data.Monoid ((<>))
 import Data.Word (Word16)
 import Foreign (Storable(..), allocaBytes)
 
@@ -218,6 +217,11 @@ propClearBit xfi i =
     xi :: Integer
     xi = fromIntegral xfi
 
+instance Show (Word16 -> Word16) where 
+  show _ = "Word16 -> Word16"
+
+instance Show (Word16 -> Bool) where 
+  show _ = "Word16 -> Word16"
 
 main :: IO ()
 main = defaultMain tests where

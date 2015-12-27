@@ -75,12 +75,10 @@ module Data.BitSet.Generic
 
 import Prelude hiding (null, map, filter, foldr)
 
-import Control.Applicative ((<$>))
 import Control.DeepSeq (NFData(..))
 import Data.Bits (Bits, (.|.), (.&.), complement, bit,
                   testBit, setBit, clearBit, popCount)
 import Data.Data (Typeable)
-import Data.Monoid (Monoid(..))
 import Foreign (Storable)
 import GHC.Exts (build)
 #if defined(__GLASGOW_HASKELL__) && (__GLASGOW_HASKELL__ >= 707)

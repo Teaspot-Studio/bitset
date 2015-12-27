@@ -74,6 +74,7 @@ import Prelude hiding (null, map, filter, foldr)
 
 import Data.Bits (Bits(..))
 import GHC.Base (Int(..))
+import Data.Maybe (fromJust)
 
 import Control.DeepSeq (NFData(..))
 
@@ -122,7 +123,7 @@ instance Bits FasterInteger where
     isSigned = isSigned . unFI
     {-# INLINE isSigned #-}
 
-    bitSize = bitSize . unFI
+    bitSize = fromJust . bitSizeMaybe . unFI
     {-# INLINE bitSize #-}
 
 #if defined(__GLASGOW_HASKELL__) && (__GLASGOW_HASKELL__ >= 707)
